@@ -14,7 +14,15 @@
     player = new YT.Player('ytplayer', {
       height: '360',
       width: '640',
-      videoId: 'M7lc1UVf-VE'
+      videoId: 'Dx5qFachd3A',
+      events: {
+          'onReady': onPlayerReady
+      }
     });
+  }
+  
+  function onPlayerReady(event) {
+        event.target.setVolume(100);
+        event.target.playVideo();
   }
 </script>
