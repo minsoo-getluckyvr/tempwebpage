@@ -1,1 +1,26 @@
-<h1>Twitch</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="twitchstyles.css">
+  </head>
+  <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+  <div id="SamplePlayerDivID">
+    <body style='overflow:hidden'>
+      <script type="text/javascript">
+        var options = {
+          width: "100%",
+          height: "100%",
+          channel: "topgeartv",
+          // Only needed if this page is going to be embedded on other websites
+          parent: ["minsoo-getluckyvr.github.io"]
+        };
+        var player = new Twitch.Player("SamplePlayerDivID", options);
+        player.addEventListener(Twitch.Player.READY, function(){
+          player.setQuality("360p30");
+          player.setMuted(false);
+          player.setVolume(1);
+        });
+      </script>
+    </body>
+  </div>
+</html>
