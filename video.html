@@ -29,10 +29,13 @@
 
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
   <script>
-      videojs('my-player', {
-        controls: true,
-        autoplay: true,
-        preload: 'auto'
-      });
+    var player = videojs('my-player', {
+      controls: true,
+      autoplay: true,
+      preload: 'auto'
+    });
+    player.on('ready', function() {
+      var promise = player.play();
+    });
    </script>
 </body>
